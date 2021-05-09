@@ -20,17 +20,19 @@ use Composer\Semver\VersionParser;
 
 
 
+
+
 class InstalledVersions
 {
 private static $installed = array (
   'root' => 
   array (
-    'pretty_version' => '1.0.0+no-version-set',
-    'version' => '1.0.0.0',
+    'pretty_version' => 'dev-master',
+    'version' => 'dev-master',
     'aliases' => 
     array (
     ),
-    'reference' => NULL,
+    'reference' => 'b340c4fcd5678fae3a7896379789f466ef79f6cb',
     'name' => 'drupal/recommended-project',
   ),
   'versions' => 
@@ -876,12 +878,12 @@ private static $installed = array (
     ),
     'drupal/recommended-project' => 
     array (
-      'pretty_version' => '1.0.0+no-version-set',
-      'version' => '1.0.0.0',
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
       'aliases' => 
       array (
       ),
-      'reference' => NULL,
+      'reference' => 'b340c4fcd5678fae3a7896379789f466ef79f6cb',
     ),
     'drupal/responsive_image' => 
     array (
@@ -1349,6 +1351,15 @@ private static $installed = array (
         0 => '*',
       ),
     ),
+    'squizlabs/php_codesniffer' => 
+    array (
+      'pretty_version' => '3.6.0',
+      'version' => '3.6.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'ffced0d2c8fa8e6cdc4d695a743271fab6c38625',
+    ),
     'stack/builder' => 
     array (
       'pretty_version' => 'v1.0.6',
@@ -1749,7 +1760,6 @@ foreach (self::getInstalled() as $installed) {
 $packages[] = array_keys($installed['versions']);
 }
 
-
 if (1 === \count($packages)) {
 return $packages[0];
 }
@@ -1941,6 +1951,7 @@ public static function reload($data)
 self::$installed = $data;
 self::$installedByVendor = array();
 }
+
 
 
 
